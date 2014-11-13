@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+ 
+ <struts>
+ <constant name="struts.freemarker.manager.classname"   
+    value="com.yhd.tools.FreemarkerManager" />  
+    <constant name="struts.enable.DynamicMethodInvocation"
+        value="false" />
+    <constant name="struts.devMode" value="false" />
+ 
+    <package name="default" extends="struts-default" namespace="/">
+        <action name="list" method="list"
+            class="com.yhd.tools.UserAction">
+            <result type="freemarker" name="success">/WEB-INF/ftl/index.ftl</result>
+        </action>
+        <action name="add" method="add"
+            class="com.yhd.tools.UserAction">
+            <result type="freemarker" name="success">/WEB-INF/ftl/index.ftl</result>
+        </action>
+    </package>
+</struts>
